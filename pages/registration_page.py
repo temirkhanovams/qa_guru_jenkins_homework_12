@@ -1,5 +1,5 @@
 from data.users import User
-from qa_guru_selene_homework_10 import resource
+from qa_guru_selene_homework_12 import resource
 from selene import browser, be, by, command, have
 
 
