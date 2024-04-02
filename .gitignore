@@ -1,3 +1,7 @@
 .pytest_cache/
 venv/
 .idea/
+data/__pycache__/
+qa_guru_selene_homework_12/__pycache__/
+tests/__pycache__/
+pages/__pycache__/
