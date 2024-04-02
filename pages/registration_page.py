@@ -4,6 +4,7 @@ from selene import browser, be, by, command, have
 
 import allure
 
+
 class RegistrationPage:
     def __init__(self):
         self.first_name_selector = browser.element('#firstName')
@@ -98,5 +99,5 @@ class RegistrationPage:
     def should_registered_user_with(self, admin: User):
         self.result_selector.should(
             have.texts(f'{admin.first_name} {admin.last_name}', {admin.email}, {admin.gender}, {admin.phone},
-                {admin.birthday}, {admin.subjects}, {admin.hobbies}, {admin.file}, {admin.address},
-                f'{admin.state} {admin.city}'))
+                       {admin.birthday}, {admin.subjects}, {admin.hobbies}, {admin.file}, {admin.address},
+                       f'{admin.state} {admin.city}'))
