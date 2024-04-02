@@ -1,0 +1,69 @@
+from data import users
+from pages.registration_page import RegistrationPage
+
+
+def test_student_registration_form(browser_init, test_user=users.admin):
+    registration_page = RegistrationPage()
+    registration_page.open()
+    registration_page.fill(test_user)
+    registration_page.submit()
+    registration_page.should_registered_user_with(test_user)
+
+
+def test_pass1():
+    pass
+
+
+def test_pass2():
+    pass
+
+def test_pass3():
+    pass
+
+
+def test_pass3():
+    pass
+
+
+def test_pass4():
+    pass
+
+
+def test_pass5():
+    pass
+
+
+def test_pass6():
+    pass
+
+
+def test_pass7():
+    pass
+
+
+def test_pass8():
+    pass
+
+def test_pass9():
+    pass
+
+def test_pass10():
+    assert False
+
+def test_pass11():
+    assert False
+
+def test_pass12():
+    assert False
+
+def test_pass13():
+    assert False
+
+def test_pass14():
+    assert False
+
+def test_pass15():
+    assert False
+
+
+
