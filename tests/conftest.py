@@ -6,18 +6,18 @@ from selenium.webdriver.chrome.options import Options
 from utils import attach
 
 
-@pytest.fixture(scope='function')
-def browser_init():
-    browser.config.base_url = 'https://demoqa.com'
-    browser.config.window_width = 1024
-    browser.config.window_height = 780
-    driver_options = webdriver.ChromeOptions()
-    driver_options.page_load_strategy = 'eager'
-    browser.config.driver_options = driver_options
-
-    yield
-
-    browser.quit()
+# @pytest.fixture(scope='function')
+# def browser_init():
+#     browser.config.base_url = 'https://demoqa.com'
+#     browser.config.window_width = 1024
+#     browser.config.window_height = 780
+#     driver_options = webdriver.ChromeOptions()
+#     driver_options.page_load_strategy = 'eager'
+#     browser.config.driver_options = driver_options
+#
+#     yield
+#
+#     browser.quit()
 
 
 @pytest.fixture(scope='function')
@@ -34,6 +34,6 @@ def setup_browser(request):
     attach.add_screenshot(browser)
     attach.add_logs(browser)
     attach.add_html(browser)
-    # attach.add_video(browser)
+    attach.add_video(browser)
 
     browser.quit()

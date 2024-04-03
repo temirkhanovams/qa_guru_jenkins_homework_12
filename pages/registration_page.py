@@ -34,7 +34,7 @@ class RegistrationPage:
     @allure.step("Открываем страницу регистрации")
     @allure.link('https://demoqa.com', name='Testing')
     def open(self):
-        return browser.open(f'/automation-practice-form')
+        return browser.open(f'https://demoqa.com/automation-practice-form')
 
     @allure.step("Заполняем Фамилию и имя")
     def fill_full_name(self, first_name, last_name):
