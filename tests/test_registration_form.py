@@ -23,10 +23,6 @@ def test_pass3():
     pass
 
 
-def test_pass3():
-    pass
-
-
 def test_pass4():
     pass
 
