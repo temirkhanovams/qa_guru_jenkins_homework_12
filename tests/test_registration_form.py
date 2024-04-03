@@ -1,5 +1,4 @@
 import allure
-import pytest
 from allure_commons.types import Severity
 
 from data import users

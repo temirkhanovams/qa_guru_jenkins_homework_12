@@ -3,7 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selene import browser
 from utils import attach
-import os
 
 
 @pytest.fixture(scope='function', autouse=True)
