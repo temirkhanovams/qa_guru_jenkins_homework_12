@@ -48,6 +48,7 @@ def setup_browser(request):
 
     browser.config.driver = driver
 
+
     yield browser
     with allure.step('Add screenshot'):
         attach.add_screenshot(browser)
