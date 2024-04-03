@@ -1,10 +1,18 @@
+import allure
 import pytest
+from allure_commons.types import Severity
 
 from data import users
 from pages.registration_page import RegistrationPage
 
 
-def test_student_registration_form(test_user=users.admin):
+@allure.tag('web')
+@allure.severity(Severity.CRITICAL)
+@allure.label('owner', 'TemirkhanovaMS')
+@allure.feature('Запуск тестов через Selenoid')
+@allure.story('story')
+@allure.description('Запуск тестов registration_page на DEMOQA через Selenoid')
+def test_student_registration_form(setup_browser, test_user=users.admin):
     registration_page = RegistrationPage()
     registration_page.open()
     registration_page.fill(test_user)
@@ -15,73 +23,19 @@ def test_student_registration_form(test_user=users.admin):
 def test_pass1():
     pass
 
-
 def test_pass2():
     pass
 
-def test_pass3():
-    pass
-
-
-def test_pass4():
-    pass
-
-
-def test_pass5():
-    pass
-
-
-def test_pass6():
-    pass
-
-
-def test_pass7():
-    pass
-
-
-def test_pass8():
-    pass
-
-def test_pass9():
-    pass
-
-def test_fail10():
+def test_fail1():
     assert False
 
-def test_fail11():
-    assert False
-
-def test_fail12():
-    assert False
-
-def test_fail13():
-    assert False
-
-def test_fail14():
-    assert False
-
-def test_fail15():
+def test_fail2():
     assert False
 
 @pytest.mark.skip
-def test_skipped16():
+def test_skipped1():
     pass
 
 @pytest.mark.skip
-def test_skipped17():
+def test_skipped2():
     pass
-
-@pytest.mark.skip
-def test_skipped18():
-    pass
-
-@pytest.mark.skip
-def test_skipped19():
-    pass
-
-@pytest.mark.skip
-def test_skipped20():
-    pass
-
-
-

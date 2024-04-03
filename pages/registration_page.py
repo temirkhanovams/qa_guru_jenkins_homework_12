@@ -1,17 +1,10 @@
 import allure
-from allure_commons.types import Severity
 from selene import browser, be, by, command, have
 
 from data.users import User
 from qa_guru_jenkins_homework_12 import resource
 
 
-@allure.tag('web')
-@allure.severity(Severity.CRITICAL)
-@allure.label('owner', 'TemirkhanovaMS')
-@allure.feature('Запуск тестов через Selenoid')
-@allure.story('story')
-@allure.description('Запуск тестов registration_page на DEMOQA через Selenoid')
 class RegistrationPage:
     def __init__(self):
         self.first_name_selector = browser.element('#firstName')
@@ -34,7 +27,7 @@ class RegistrationPage:
     @allure.step("Открываем страницу регистрации")
     @allure.link('https://demoqa.com', name='Testing')
     def open(self):
-        return browser.open(f'https://demoqa.com/automation-practice-form')
+        return browser.open(f'/automation-practice-form')
 
     @allure.step("Заполняем Фамилию и имя")
     def fill_full_name(self, first_name, last_name):
